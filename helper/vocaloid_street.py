@@ -664,8 +664,14 @@ if __name__ == "__main__":
             circles=[],
             media=media_,
             sources=[
-                Source("Date: https://web.archive.org/web/20231002052001/https://voca-st.com/", (RT.Reliable, OT.Official)),
-                Source("Participating circles: https://web.archive.org/web/20240228123634/https://voca-st.com/circleList", (RT.Reliable, OT.Official)),
+                Source(
+                    "Date: https://web.archive.org/web/20231002052001/https://voca-st.com/",
+                    (RT.Reliable, OT.Official),
+                ),
+                Source(
+                    "Participating circles: https://web.archive.org/web/20240228123634/https://voca-st.com/circleList",
+                    (RT.Reliable, OT.Official),
+                ),
             ],
             locations=locations,
             # description=None,
@@ -677,93 +683,172 @@ if __name__ == "__main__":
         event.circles = retrieve_circles(event_name)
         events.append(event)
 
-    # i =   # ==== vocaloid_street ====
-    # if i in active_events:
-    #     event_name = f"vocaloid_street{i}"
-    #     print(f"Processing {event_name} ...")
+    i = 9  # ==== vocaloid_street9 ====
+    if i in active_events:
+        event_name = f"vocaloid_street{i}"
+        print(f"Processing {event_name} ...")
 
-    #     media_ = [
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #     ]
-    #     locations = [
-    #         # Location(
-    #         #     iframe_url="",
-    #         #     description="",
-    #         #     sources=[
-    #         #         Source(
-    #         #             "",
-    #         #             (ReliabilityTypes.Reliable, OriginTypes.Official),
-    #         #         )
-    #         #     ],
-    #         # ),
-    #     ]
-    #     event = Event(
-    #         aliases=[
-    #             f"VOCALOID STREET {i:02d}",
-    #             f"ボーカロイドストリート{i:02d}",
-    #             f"ボカスト{i:02d}",
-    #         ],
-    #         dates="",
-    #         circles=[],
-    #         media=media_,
-    #         sources=[
-    #             # Source("Date: ", (RT.Reliable, OT.Official)),
-    #             # Source("Participating circles: ", (RT.Reliable, OT.Official)),
-    #         ],
-    #         locations=locations,
-    #         # description=None,
-    #         # comments=None,
-    # #         last_edited="2026.06.15",
-    #     )
+        media_ = [
+            Medium(
+                "09_20241007091042_top_09-2.jpg",
+                [
+                    Source(
+                        "https://web.archive.org/web/20241007091042/https://voca-st.com/events/09/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+                comments="イラスト:縞城依月",
+            ),
+            Medium(
+                "09_20241007083034_logo_09.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20241007083034/https://voca-st.com/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "09_GQRbLMMakAAdIPs.jpg",
+                [
+                    Source(
+                        "https://x.com/voca_st/status/1802666003131965582",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "09_20240923_layout.pdf",
+                [
+                    Source(
+                        "https://web.archive.org/web/20241109234703/https://voca-st.com/events/09/circlelist",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                iframe_url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.751071069338!2d135.7783858758542!3d35.01293597281049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108e5fdb0fb75%3A0x32f576fbc1dc5042!2sMiyako%20Messe%20(Kyoto%20International%20Exhibition%20Hall)!5e0!3m2!1sen!2sfr!4v1781558408737!5m2!1sen!2sfr",
+                description="京都市勧業館みやこめっせ",
+                sources=[
+                    Source(
+                        "https://web.archive.org/web/20240715124116/https://voca-st.com/",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"VOCALOID STREET {i:02d}",
+                f"ボーカロイドストリート{i:02d}",
+                f"ボカスト{i:02d}",
+            ],
+            dates="2024.09.23",
+            circles=[],
+            media=media_,
+            sources=[
+                Source(
+                    "Date: https://web.archive.org/web/20240715124116/https://voca-st.com/",
+                    (RT.Reliable, OT.Official),
+                ),
+                Source(
+                    "Participating circles: https://web.archive.org/web/20241109234703/https://voca-st.com/events/09/circlelist",
+                    (RT.Reliable, OT.Official),
+                ),
+            ],
+            locations=locations,
+            # description=None,
+            # comments=None,
+            last_edited="2026.06.15",
+        )
 
-    #     # Retrieve circles
-    #     # event.circles = retrieve_circles(event_name)
-    #     events.append(event)
+        # Retrieve circles
+        event.circles = retrieve_circles(event_name)
+        events.append(event)
 
-    # i =   # ==== vocaloid_street ====
-    # if i in active_events:
-    #     event_name = f"vocaloid_street{i}"
-    #     print(f"Processing {event_name} ...")
+    i = 10  # ==== vocaloid_street10 ====
+    if i in active_events:
+        event_name = f"vocaloid_street{i}"
+        print(f"Processing {event_name} ...")
 
-    #     media_ = [
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #     ]
-    #     locations = [
-    #         # Location(
-    #         #     iframe_url="",
-    #         #     description="",
-    #         #     sources=[
-    #         #         Source(
-    #         #             "",
-    #         #             (ReliabilityTypes.Reliable, OriginTypes.Official),
-    #         #         )
-    #         #     ],
-    #         # ),
-    #     ]
-    #     event = Event(
-    #         aliases=[
-    #             f"VOCALOID STREET {i:02d}",
-    #             f"ボーカロイドストリート{i:02d}",
-    #             f"ボカスト{i:02d}",
-    #         ],
-    #         dates="",
-    #         circles=[],
-    #         media=media_,
-    #         sources=[
-    #             # Source("Date: ", (RT.Reliable, OT.Official)),
-    #             # Source("Participating circles: ", (RT.Reliable, OT.Official)),
-    #         ],
-    #         locations=locations,
-    #         # description=None,
-    #         # comments=None,
-    # #         last_edited="2026.06.15",
-    #     )
+        media_ = [
+            Medium(
+                "10_Gfz2qvlbcAAp0yL.jpg",
+                [
+                    Source(
+                        "https://x.com/voca_st/status/1872642778012041671",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+                comments="イラスト·ロゴデザイン: GYARI",
+            ),
+            Medium(
+                "10_Gg7ZythaEAAFF5z.jpg",
+                [
+                    Source(
+                        "https://x.com/voca_st/status/1877678004165542064",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "10_20241007080027_top_10-1.jpg",
+                [
+                    Source(
+                        "https://web.archive.org/web/20241007080027/https://voca-st.com/events/10/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "10_20241007083034_logo_10.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20241007083034/https://voca-st.com/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                iframe_url="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13051.9153575633!2d136.8873299!3d35.1322016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600379fe829a2f51%3A0x284de675a464956a!2sShirotori%20Hall!5e0!3m2!1sen!2sfr!4v1781209672065!5m2!1sen!2sfr",
+                description="名古屋国際会議場 白鳥ホール",
+                sources=[
+                    Source(
+                        "https://web.archive.org/web/20250304100157/https://voca-st.com/events/10/",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"VOCALOID STREET {i:02d}",
+                f"ボーカロイドストリート{i:02d}",
+                f"ボカスト{i:02d}",
+            ],
+            dates="2025.01.12",
+            circles=[],
+            media=media_,
+            sources=[
+                Source("Date: https://web.archive.org/web/20250304100157/https://voca-st.com/events/10/", (RT.Reliable, OT.Official)),
+                Source("Participating circles: https://web.archive.org/web/20250215223553/https://voca-st.com/events/10/circleList", (RT.Reliable, OT.Official)),
+            ],
+            locations=locations,
+            # description=None,
+            # comments=None,
+            last_edited="2026.06.17",
+        )
 
-    #     # Retrieve circles
-    #     # event.circles = retrieve_circles(event_name)
-    #     events.append(event)
+        # Retrieve circles
+        event.circles = retrieve_circles(event_name)
+        events.append(event)
 
     # i =   # ==== vocaloid_street ====
     # if i in active_events:
