@@ -67,7 +67,11 @@ def retrieve_circles(event_name: str) -> list[Circle]:
 
 if __name__ == "__main__":
     events: list[Event] = []
-    active_events: list[int | str] = list(range(1, 12)) + ["tajimi"]
+    active_events: list[int | str] = list(range(1, 12 + 1)) + [
+        "tajimi",
+        "sendai",
+        "sendai2",
+    ]
 
     i = 1  # ==== vocaloid_street1 ====
     if i in active_events:
@@ -139,7 +143,7 @@ if __name__ == "__main__":
         event.circles = retrieve_circles(event_name)
         events.append(event)
 
-    n = "tajimi"  # ==== vocaloid_street2 ====
+    n = "tajimi"  # ==== vocaloid_streettajimi ====
     if n in active_events:
         event_name = f"vocaloid_street{n}"
         print(f"Processing {event_name} ...")
@@ -812,8 +816,7 @@ if __name__ == "__main__":
                     )
                 ],
             ),
-            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))])
         ]
         locations = [
             Location(
@@ -837,8 +840,14 @@ if __name__ == "__main__":
             circles=[],
             media=media_,
             sources=[
-                Source("Date: https://web.archive.org/web/20250304100157/https://voca-st.com/events/10/", (RT.Reliable, OT.Official)),
-                Source("Participating circles: https://web.archive.org/web/20250215223553/https://voca-st.com/events/10/circleList", (RT.Reliable, OT.Official)),
+                Source(
+                    "Date: https://web.archive.org/web/20250304100157/https://voca-st.com/events/10/",
+                    (RT.Reliable, OT.Official),
+                ),
+                Source(
+                    "Participating circles: https://web.archive.org/web/20250215223553/https://voca-st.com/events/10/circleList",
+                    (RT.Reliable, OT.Official),
+                ),
             ],
             locations=locations,
             # description=None,
@@ -850,100 +859,289 @@ if __name__ == "__main__":
         event.circles = retrieve_circles(event_name)
         events.append(event)
 
-    # i =   # ==== vocaloid_street ====
-    # if i in active_events:
-    #     event_name = f"vocaloid_street{i}"
-    #     print(f"Processing {event_name} ...")
+    i = 11  # ==== vocaloid_street11 ====
+    if i in active_events:
+        event_name = f"vocaloid_street{i}"
+        print(f"Processing {event_name} ...")
 
-    #     media_ = [
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #     ]
-    #     locations = [
-    #         # Location(
-    #         #     iframe_url="",
-    #         #     description="",
-    #         #     sources=[
-    #         #         Source(
-    #         #             "",
-    #         #             (ReliabilityTypes.Reliable, OriginTypes.Official),
-    #         #         )
-    #         #     ],
-    #         # ),
-    #     ]
-    #     event = Event(
-    #         aliases=[
-    #             f"VOCALOID STREET {i:02d}",
-    #             f"ボーカロイドストリート{i:02d}",
-    #             f"ボカスト{i:02d}",
-    #         ],
-    #         dates="",
-    #         circles=[],
-    #         media=media_,
-    #         sources=[
-    #             # Source("Date: ", (RT.Reliable, OT.Official)),
-    #             # Source("Participating circles: ", (RT.Reliable, OT.Official)),
-    #         ],
-    #         locations=locations,
-    #         # description=None,
-    #         # comments=None,
-    # #         last_edited="2026.06.15",
-    #     )
+        media_ = [
+            Medium(
+                "11_top_11-2.jpg",
+                [
+                    Source(
+                        "",  # TODO
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+                comments="イラスト: 猫橋ねこ",
+            ),
+            Medium(
+                "11_top_11-1.jpg",
+                [
+                    Source(
+                        "https://web.archive.org/web/20251108122956/https://voca-st.com/events/11/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "11_20251122_layout.pdf",
+                [
+                    Source(
+                        "https://voca-st.com/events/11/circleList",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                iframe_url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.751071069338!2d135.7783858758542!3d35.01293597281049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108e5fdb0fb75%3A0x32f576fbc1dc5042!2sMiyako%20Messe%20(Kyoto%20International%20Exhibition%20Hall)!5e0!3m2!1sen!2sfr!4v1781558408737!5m2!1sen!2sfr",
+                description="京都市勧業館みやこめっせ",
+                sources=[
+                    Source(
+                        "",  # TODO
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"VOCALOID STREET {i:02d}",
+                f"ボーカロイドストリート{i:02d}",
+                f"ボカスト{i:02d}",
+            ],
+            dates="2025.11.22",
+            circles=[],
+            media=media_,
+            sources=[
+                Source("Date: ", (RT.Reliable, OT.Official)),
+                Source(
+                    "Participating circles: https://voca-st.com/events/11/circleList",
+                    (RT.Reliable, OT.Official),
+                ),
+            ],
+            locations=locations,
+            # description=None,
+            # comments=None,
+            last_edited="2026.06.19",
+        )
 
-    #     # Retrieve circles
-    #     # event.circles = retrieve_circles(event_name)
-    #     events.append(event)
+        # Retrieve circles
+        event.circles = retrieve_circles(event_name)
+        events.append(event)
 
-    # i =   # ==== vocaloid_street ====
-    # if i in active_events:
-    #     event_name = f"vocaloid_street{i}"
-    #     print(f"Processing {event_name} ...")
+    n = "sendai"  # ==== vocaloid_streetsendai ====
+    if n in active_events:
+        event_name = f"vocaloid_street{n}"
+        print(f"Processing {event_name} ...")
 
-    #     media_ = [
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #     ]
-    #     locations = [
-    #         # Location(
-    #         #     iframe_url="",
-    #         #     description="",
-    #         #     sources=[
-    #         #         Source(
-    #         #             "",
-    #         #             (ReliabilityTypes.Reliable, OriginTypes.Official),
-    #         #         )
-    #         #     ],
-    #         # ),
-    #     ]
-    #     event = Event(
-    #         aliases=[
-    #             f"VOCALOID STREET {i:02d}",
-    #             f"ボーカロイドストリート{i:02d}",
-    #             f"ボカスト{i:02d}",
-    #         ],
-    #         dates="",
-    #         circles=[],
-    #         media=media_,
-    #         sources=[
-    #             # Source("Date: ", (RT.Reliable, OT.Official)),
-    #             # Source("Participating circles: ", (RT.Reliable, OT.Official)),
-    #         ],
-    #         locations=locations,
-    #         # description=None,
-    #         # comments=None,
-    # #         last_edited="2026.06.15",
-    #     )
+        media_ = [
+            Medium(
+                "sendai_Gt4QohkXYAAhi5-.jpg",
+                [
+                    Source(
+                        "https://x.com/voca_st/status/1936003520584728979",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+                comments="イラスト: 守木涼",
+            ),
+            Medium(
+                "sendai_top_sendai.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20250422054140/https://voca-st.com/events/sendai/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "sendai_20250314073352_logo_640x224_sendai.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20250314073352/https://voca-st.com/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                iframe_url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d327610.7480136059!2d140.85146171062968!3d38.2582700560318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8988bab8926a4d%3A0xd0418f9f93c216c7!2sMiyagi%20Industrial%20Exchange%20Center%20-%20Yume%20Messe%20Miyagi!5e0!3m2!1sen!2sfr!4v1781902929343!5m2!1sen!2sfr",
+                description="みやぎ産業交流センター (萝メッセみやぎ 西館ホール)",
+                sources=[
+                    Source(
+                        "Venue: https://web.archive.org/web/20250422054140/https://voca-st.com/events/sendai/",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    ),
+                    Source(
+                        "Hall: https://web.archive.org/web/20250720054402/https://voca-st.com/events/sendai/",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    ),
+                ],
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"VOCALOID STREET {i:02d}",
+                f"ボーカロイドストリート{i:02d}",
+                f"ボカスト{i:02d}",
+            ],
+            dates="2025.06.22",
+            circles=[],
+            media=media_,
+            sources=[
+                Source(
+                    "Date: https://web.archive.org/web/20250422054140/https://voca-st.com/events/sendai/",
+                    (RT.Reliable, OT.Official),
+                ),
+                Source(
+                    "Participating circles: https://web.archive.org/web/20250621231429/https://voca-st.com/events/sendai/circleList",
+                    (RT.Reliable, OT.Official),
+                ),
+            ],
+            locations=locations,
+            # description=None,
+            # comments=None,
+            last_edited="2026.06.19",
+        )
 
-    #     # Retrieve circles
-    #     # event.circles = retrieve_circles(event_name)
-    #     events.append(event)
+        # Retrieve circles
+        event.circles = retrieve_circles(event_name)
+        events.append(event)
+
+    i = 12  # ==== vocaloid_street12 ====
+    if i in active_events:
+        event_name = f"vocaloid_street{i}"
+        print(f"Processing {event_name} ...")
+
+        media_ = [
+            Medium(
+                "12_top_12-3.jpg",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260410162347/https://voca-st.com/events/12/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+                comments="イラスト: saki",
+            ),
+            Medium(
+                "12_top_12-2.jpg",
+                [
+                    Source(
+                        "https://web.archive.org/web/20251011044654/https://voca-st.com/events/12/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "12_20260216_layout.pdf",
+                [
+                    Source(
+                        "https://voca-st.com/events/12/circleList",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                iframe_url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.866190194564!2d137.1268545758678!3d35.33414417270119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60036a70848ce44f%3A0xaea80b3888b9c8db!2sSangyobunka%20Center!5e0!3m2!1sen!2sfr!4v1781903916732!5m2!1sen!2sfr",
+                description="多治見市産業文化センター ",
+                sources=[
+                    Source(
+                        "https://web.archive.org/web/20260410162347/https://voca-st.com/events/12/",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"VOCALOID STREET {i:02d}",
+                f"ボーカロイドストリート{i:02d}",
+                f"ボカスト{i:02d}",
+            ],
+            dates="2026.02.15",
+            circles=[],
+            media=media_,
+            sources=[
+                Source(
+                    "Date: https://web.archive.org/web/20260410162347/https://voca-st.com/events/12/",
+                    (RT.Reliable, OT.Official),
+                ),
+                Source(
+                    "Participating circles: https://voca-st.com/events/12/circleList",
+                    (RT.Reliable, OT.Official),
+                ),
+            ],
+            locations=locations,
+            # description=None,
+            # comments=None,
+            last_edited="2026.06.19",
+        )
+
+        # Retrieve circles
+        event.circles = retrieve_circles(event_name)
+        events.append(event)
+
+    n = "sendai2"  # ==== vocaloid_streetsendai2 ====
+    if n in active_events:
+        event_name = f"vocaloid_street{n}"
+        print(f"Processing {event_name} ...")
+
+        media_ = [
+            Medium(
+                "sendai2_sendai_02_a.jpg",
+                [Source("", (RT.Reliable, OT.Official))],  # TODO
+                comments="イラスト: あすらて",
+            ),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                iframe_url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d327610.7480136059!2d140.85146171062968!3d38.2582700560318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8988bab8926a4d%3A0xd0418f9f93c216c7!2sMiyagi%20Industrial%20Exchange%20Center%20-%20Yume%20Messe%20Miyagi!5e0!3m2!1sen!2sfr!4v1781902929343!5m2!1sen!2sfr",
+                description="みやぎ産業交流センター(夢メッセみやぎ)",
+                sources=[
+                    Source(
+                        "",  # TODO
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    ),
+                ],
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"VOCALOID STREET {i:02d}",
+                f"ボーカロイドストリート{i:02d}",
+                f"ボカスト{i:02d}",
+            ],
+            dates="2026.07.12",
+            circles=[],
+            media=media_,
+            sources=[
+                Source("Date: ", (RT.Reliable, OT.Official)),  # TODO
+                # Source("Participating circles: ", (RT.Reliable, OT.Official)),
+            ],
+            locations=locations,
+            # description=None,
+            # comments=None,
+            last_edited="2026.06.19",
+        )
+
+        # Retrieve circles
+        # event.circles = retrieve_circles(event_name)
+        events.append(event)
 
     # ==== event group ====
     media = [
-        # Medium("",
-        #        [Source("", (RT.Reliable, OT.Official))]),
-        # Medium("",
-        #        [Source("", (RT.Reliable, OT.Official))]),
+        # Medium("", [Source("", (RT.Reliable, OT.Official))]),
     ]
     links = ["http://voca-st.com/", "https://x.com/voca_st"]
 
@@ -960,7 +1158,7 @@ if __name__ == "__main__":
         ],
         comments=None,
         description=None,
-        last_edited="2026.06.16",
+        last_edited="2026.06.19",
     )
 
     print(f"Saving {Path(__file__).stem} database...")
