@@ -869,7 +869,7 @@ if __name__ == "__main__":
                 "11_top_11-2.jpg",
                 [
                     Source(
-                        "",  # TODO
+                        "https://web.archive.org/web/20260619205156/https://voca-st.com/events/11/",
                         (RT.Reliable, OT.Official),
                     )
                 ],
@@ -901,7 +901,7 @@ if __name__ == "__main__":
                 description="京都市勧業館みやこめっせ",
                 sources=[
                     Source(
-                        "",  # TODO
+                        "https://web.archive.org/web/20260619205156/https://voca-st.com/events/11/",
                         (ReliabilityTypes.Reliable, OriginTypes.Official),
                     )
                 ],
@@ -917,7 +917,10 @@ if __name__ == "__main__":
             circles=[],
             media=media_,
             sources=[
-                Source("Date: ", (RT.Reliable, OT.Official)),
+                Source(
+                    "Date: https://web.archive.org/web/20260619205156/https://voca-st.com/events/11/",
+                    (RT.Reliable, OT.Official),
+                ),
                 Source(
                     "Participating circles: https://voca-st.com/events/11/circleList",
                     (RT.Reliable, OT.Official),
@@ -926,7 +929,7 @@ if __name__ == "__main__":
             locations=locations,
             # description=None,
             # comments=None,
-            last_edited="2026.06.19",
+            last_edited="2026.06.20",
         )
 
         # Retrieve circles
@@ -987,9 +990,12 @@ if __name__ == "__main__":
         ]
         event = Event(
             aliases=[
-                f"VOCALOID STREET {i:02d}",
-                f"ボーカロイドストリート{i:02d}",
-                f"ボカスト{i:02d}",
+                "VOCALOID STREET in SENDAI",
+                "ボーカロイドストリート in SENDAI",
+                "ボカスト in SENDAI",
+                "VOCALOID STREET in 仙台",
+                "ボーカロイドストリート in 仙台",
+                "ボカスト in 仙台",
             ],
             dates="2025.06.22",
             circles=[],
@@ -1099,8 +1105,22 @@ if __name__ == "__main__":
         media_ = [
             Medium(
                 "sendai2_sendai_02_a.jpg",
-                [Source("", (RT.Reliable, OT.Official))],  # TODO
+                [
+                    Source(
+                        "https://web.archive.org/web/20260619212135/https://voca-st.com/events/sendai02/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
                 comments="イラスト: あすらて",
+            ),
+            Medium(
+                "sendai2_HBGlZrBakAglrr1.jpg",
+                [
+                    Source(
+                        "https://x.com/voca_st/status/2022943965574762684",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
             ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
@@ -1110,7 +1130,7 @@ if __name__ == "__main__":
                 description="みやぎ産業交流センター(夢メッセみやぎ)",
                 sources=[
                     Source(
-                        "",  # TODO
+                        "https://web.archive.org/web/20260619212135/https://voca-st.com/events/sendai02/",
                         (ReliabilityTypes.Reliable, OriginTypes.Official),
                     ),
                 ],
@@ -1118,21 +1138,31 @@ if __name__ == "__main__":
         ]
         event = Event(
             aliases=[
-                f"VOCALOID STREET {i:02d}",
-                f"ボーカロイドストリート{i:02d}",
-                f"ボカスト{i:02d}",
+                "VOCALOID STREET in SENDAI 02 ",
+                "ボーカロイドストリート in SENDAI 02",
+                "ボカスト in SENDAI 02",
+                "VOCALOID STREET in 仙台02",
+                "ボーカロイドストリート in 仙台02",
+                "ボカスト in 仙台02",
             ],
             dates="2026.07.12",
             circles=[],
             media=media_,
             sources=[
-                Source("Date: ", (RT.Reliable, OT.Official)),  # TODO
+                Source(
+                    "Date: https://web.archive.org/web/20260619212135/https://voca-st.com/events/sendai02/",
+                    (RT.Reliable, OT.Official),
+                ),
+                Source(
+                    'Alias "VOCALOID STREET in SENDAI 02": https://web.archive.org/web/20260619213434/https://voca-st.com/events/sendai02/about',
+                    (RT.Reliable, OT.Official),
+                ),
                 # Source("Participating circles: ", (RT.Reliable, OT.Official)),
             ],
             locations=locations,
             # description=None,
             # comments=None,
-            last_edited="2026.06.19",
+            last_edited="2026.06.20",
         )
 
         # Retrieve circles
@@ -1152,13 +1182,12 @@ if __name__ == "__main__":
         links=links,
         sources=[
             # Source(
-            #     "",
-            #     (ReliabilityTypes.Reliable, OriginTypes.Official),
+            #     "", (ReliabilityTypes.Reliable, OriginTypes.Official),
             # ),
         ],
         comments=None,
         description=None,
-        last_edited="2026.06.19",
+        last_edited="2026.06.20",
     )
 
     print(f"Saving {Path(__file__).stem} database...")
